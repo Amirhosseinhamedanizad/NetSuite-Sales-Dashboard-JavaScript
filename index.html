@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetSuite Sales Dashboard</title>
+    <style>
+        /* Add CSS styling for the dashboard */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>NetSuite Sales Dashboard</h1>
+        <div id="salesData"></div>
+    </div>
+
+    <script>
+        // Simulated function to fetch sales data from NetSuite API
+        function fetchSalesData() {
+            // Simulate an API call to NetSuite (replace with actual API call)
+            var salesData = {
+                totalSales: 250000,
+                numberOfOrders: 125,
+                averageOrderValue: 2000,
+                topSellingProduct: 'Widget X',
+            };
+
+            // Display the fetched sales data on the dashboard
+            var salesDataElement = document.getElementById('salesData');
+            salesDataElement.innerHTML = `
+                <h2>Sales Overview</h2>
+                <p>Total Sales: $${salesData.totalSales.toFixed(2)}</p>
+                <p>Number of Orders: ${salesData.numberOfOrders}</p>
+                <p>Average Order Value: $${salesData.averageOrderValue.toFixed(2)}</p>
+                <p>Top Selling Product: ${salesData.topSellingProduct}</p>
+            `;
+        }
+
+        // Call the function to fetch and display sales data
+        fetchSalesData();
+    </script>
+</body>
+</html>
